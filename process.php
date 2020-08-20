@@ -1,6 +1,6 @@
  <?php
 
-$mysqli=new mysqli('localhost','root','','employee_system')or die(mysqli_error($mysqli));
+$mysqli=new mysqli('localhost','id14660058_root','01120640612Ak$','id14660058_employee_system')or die(mysqli_error($mysqli));
 
 
 if(isset($_GET['delete']))

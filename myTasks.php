@@ -31,17 +31,7 @@
   </head>
 <body>
     <?php
-    $serverName='localhost';
-    $dbUser='root';
-    $dbPassword='';
-    $dbName='employee_system';    
-
-    $con=new mysqli($serverName,$dbUser,$dbPassword,$dbName);
-
-    if($con->connect_error)
-    {
-       die($con->connect_error);
-    }
+include 'conn.php';
     
      $query="SELECT employees.name as name
 FROM employees JOIN tasks
@@ -67,17 +57,7 @@ ON employees.id = tasks.emp_id";
     <h2 class="task_title" >Empolyee Leaderboard</h2>
       <?php require_once 'process.php';?>
     <?php
-    $serverName='localhost';
-    $dbUser='root';
-    $dbPassword='';
-    $dbName='employee_system';    
-
-    $con=new mysqli($serverName,$dbUser,$dbPassword,$dbName);
-
-    if($con->connect_error)
-    {
-       die($con->connect_error);
-    }
+   include 'conn.php';
     
      $query="select * from tasks"; 
      $result=$con->query($query);
